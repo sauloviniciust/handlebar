@@ -1,0 +1,17 @@
+  <link rel="stylesheet" href="/css/index.css">
+
+<div class="container">
+    <h1>Olá {{name}} {{last_name}}! Prazer em ver você!</h1>
+    {{#if isAdmin}}
+    <h2 class="h2">Lista de Alimentos Disponíveis</h2>
+    {{#each food}}
+    <div class="div-alimento">
+        <p class="p-alimento">Alimento: {{this.name}}</p>
+        <p class="p-preco">Preço: {{this.price}}</p>
+    </div>
+    {{/each}}
+    {{else}}
+    <p>Você não tem permissão para ver a lista de alimentos.</p>
+    {{/if}}
+</div>
+<script src="/js/index.js"></script>
